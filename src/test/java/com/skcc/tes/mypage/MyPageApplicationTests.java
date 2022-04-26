@@ -3,10 +3,10 @@ package com.skcc.tes.mypage;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
-//@SpringBootTest
+@SpringBootTest
 class MyPageApplicationTests {
 
-//	@Test
+	@Test
 	void contextLoads() {
 	}
 

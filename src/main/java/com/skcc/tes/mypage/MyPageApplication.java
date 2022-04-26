@@ -10,13 +10,14 @@ import org.springframework.context.ApplicationContext;
 @EnableBinding(KafkaProcessor.class)
 public class MyPageApplication {
 
-	static ApplicationContext applicationContext;
-	public static ApplicationContext getApplicationContext(){
-		return applicationContext;
-	}
+    static ApplicationContext applicationContext;
 
-	public static void main(String[] args) {
-		applicationContext = SpringApplication.run(MyPageApplication.class, args);
-	}
+    public static ApplicationContext getApplicationContext() {
+        return applicationContext;
+    }
+
+    public static void main(String[] args) {
+        applicationContext = SpringApplication.run(MyPageApplication.class, args);
+    }
 
 }
