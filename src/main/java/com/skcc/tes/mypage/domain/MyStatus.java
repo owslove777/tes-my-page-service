@@ -11,12 +11,13 @@ import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.util.Date;
 
-@Entity
+@Entity(name = "my_status")
+@Table(name = "my_status")
 @Setter
 @Getter
 public class MyStatus {
 
-	@Id @GeneratedValue(strategy = GenerationType.AUTO)
+	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	Long id;
 	String userId;		// 사용자 ID
 	String name;		// 사용자 이름

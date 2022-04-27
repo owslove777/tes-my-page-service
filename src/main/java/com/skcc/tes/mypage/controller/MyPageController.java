@@ -22,7 +22,7 @@ public class MyPageController {
     }
 
     // Create
-    @PostMapping("/star-rate")
+    @PostMapping("/mypage")
     public MyStatusDto createNewStarRate(@RequestBody MyStatus src) {
         src.setId(null);
         MyStatus saved = repository.save(src);
@@ -30,13 +30,13 @@ public class MyPageController {
     }
 
     // Select All
-    @GetMapping("/star-rates")
+    @GetMapping("/mypages")
     public List<MyStatusDto> getAllStarRates() {
         return repository.findAll().stream().map(MyStatus::toDto).collect(Collectors.toList());
     }
 
     // Select By ID
-    @GetMapping("/star-rate/{id}")
+    @GetMapping("/mypage/{id}")
     public MyStatusDto getStarRateById(@PathVariable Long id) {
         Optional<MyStatus> byId = repository.findById(id);
         return byId.map(MyStatus::toDto).orElse(null);
