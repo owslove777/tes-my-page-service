@@ -1,4 +1,4 @@
-package com.skcc.tes.mypage.dto;
+package com.skcc.tes.mypage.domain.data;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.*;

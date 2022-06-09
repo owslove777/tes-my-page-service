@@ -27,8 +27,6 @@ spring:
           group: mypage
           destination: talent-exchange-system
           contentType: application/json
-#          consumer:
-#            ack-mode: BATCH
         event-out:
           destination: talent-exchange-system
           contentType: application/json

@@ -1,6 +1,6 @@
 package com.skcc.tes.mypage;
 
-import com.skcc.tes.mypage.event.kafka.KafkaProcessor;
+import com.skcc.tes.mypage.infrastructure.adapters.kafka.KafkaProcessor;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.stream.annotation.EnableBinding;

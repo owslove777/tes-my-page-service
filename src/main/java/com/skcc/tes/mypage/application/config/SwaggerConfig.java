@@ -1,4 +1,4 @@
-package com.skcc.tes.mypage.config;
+package com.skcc.tes.mypage.application.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

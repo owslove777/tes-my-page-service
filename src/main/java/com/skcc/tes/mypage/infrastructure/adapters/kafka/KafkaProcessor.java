@@ -1,4 +1,4 @@
-package com.skcc.tes.mypage.event.kafka;
+package com.skcc.tes.mypage.infrastructure.adapters.kafka;
 
 import org.springframework.cloud.stream.annotation.Input;
 import org.springframework.cloud.stream.annotation.Output;

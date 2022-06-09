@@ -1,9 +1,9 @@
-package com.skcc.tes.mypage.controller;
+package com.skcc.tes.mypage.application.controller;
 
 
-import com.skcc.tes.mypage.domain.MyStatus;
-import com.skcc.tes.mypage.domain.MyStatusRepository;
-import com.skcc.tes.mypage.dto.MyStatusDto;
+import com.skcc.tes.mypage.infrastructure.entity.MyStatus;
+import com.skcc.tes.mypage.infrastructure.repository.MyStatusRepository;
+import com.skcc.tes.mypage.domain.data.MyStatusDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 

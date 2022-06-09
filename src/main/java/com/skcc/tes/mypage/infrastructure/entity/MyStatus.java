@@ -1,7 +1,7 @@
-package com.skcc.tes.mypage.domain;
+package com.skcc.tes.mypage.infrastructure.entity;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.skcc.tes.mypage.dto.MyStatusDto;
+import com.skcc.tes.mypage.domain.data.MyStatusDto;
 import com.skcc.tes.mypage.vo.Address;
 import lombok.Getter;
 import lombok.Setter;
@@ -9,7 +9,6 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
-import java.util.Date;
 
 @Entity(name = "my_status")
 @Table(name = "my_status")

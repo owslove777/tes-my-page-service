@@ -1,9 +1,8 @@
-package com.skcc.tes.mypage.event;
+package com.skcc.tes.mypage.infrastructure.adapters.kafka;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.skcc.tes.mypage.MyPageApplication;
-import com.skcc.tes.mypage.event.kafka.KafkaProcessor;
 import org.springframework.messaging.MessageChannel;
 import org.springframework.messaging.MessageHeaders;
 import org.springframework.messaging.support.MessageBuilder;
