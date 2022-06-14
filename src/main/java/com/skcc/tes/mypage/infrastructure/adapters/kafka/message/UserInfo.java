@@ -1,6 +1,5 @@
-package com.skcc.tes.mypage.vo.message;
+package com.skcc.tes.mypage.infrastructure.adapters.kafka.message;
 
-import com.skcc.tes.mypage.vo.Address;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -16,6 +15,5 @@ public class UserInfo {
 
     private String userId;
     private String name;
-    private Address address;
 
 }

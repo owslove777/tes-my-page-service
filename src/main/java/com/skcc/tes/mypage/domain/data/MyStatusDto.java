@@ -16,13 +16,12 @@ public class MyStatusDto {
     Long id;
     String userId;		// 사용자 ID
     String name;		// 사용자 이름
-    Integer cntComment;	// 코멘트 개수
-    Double serviceRate;	// 나의 별점
-    Boolean isDormantAccount; 	// 휴면 계정인지 아닌지 여부
-
-    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss", timezone = "Asia/Seoul")
-    LocalDateTime lastLogin;			// 마지막 로그인
+    Double myServiceRate;	// 내가 받은 총 별점 합
+    Double myServiceCnt;	// 내가 받은 총 별점 개수
+    Long myRequestCntTotal;	// 내가 요청한 총 의뢰 개수
+    Long myRequestCntDone;	// 내가 요청한 의뢰 중, 끝난 의뢰 개수
+    Long userRequestCntTotal;	// 내가 요청 받은 총 의뢰 개수
+    Long userRequestCntDone;	// 내가 요청 받은 의뢰 중, 끝난 의뢰 개수
 
     @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss", timezone = "Asia/Seoul")
