@@ -21,7 +21,7 @@ public class MyPageController {
 
     // Create
     @PostMapping("/mypage")
-    public MyStatusDto createNewStarRate(@RequestBody MyStatusDto src) {
+    public MyStatusDto createNewUserInfo(@RequestBody MyStatusDto src) {
         src.setId(null);
         MyStatusDto saved = mypageService.save(src);
         return saved;
@@ -29,14 +29,14 @@ public class MyPageController {
 
     // Select All
     @GetMapping("/mypages")
-    public List<MyStatusDto> getAllStarRates() {
+    public List<MyStatusDto> getMypages() {
         List<MyStatusDto> list = mypageService.findAll();
-        return null;
+        return list;
     }
 
     // Select By ID
     @GetMapping("/mypage/{id}")
-    public MyStatusDto getStarRateById(@PathVariable Long id) {
+    public MyStatusDto getMyPageById(@PathVariable Long id) {
         MyStatusDto myStatus = mypageService.findById(id);
         return myStatus;
     }
