@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/mypage")
+@RequestMapping("/my-page")
 public class SwaggerMyPageController extends MyPageController {
     public SwaggerMyPageController(MypageServicePort mypageService) {
         super(mypageService);
