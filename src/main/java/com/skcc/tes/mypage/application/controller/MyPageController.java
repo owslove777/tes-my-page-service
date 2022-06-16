@@ -16,7 +16,7 @@ public class MyPageController {
 
     @GetMapping("/hello")
     public String hello() {
-        return "Hello, World! This is Star Rate Service";
+        return "Hello, World! This is My Page Service";
     }
 
     // Create

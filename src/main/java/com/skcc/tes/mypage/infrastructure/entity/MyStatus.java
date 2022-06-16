@@ -19,7 +19,7 @@ public class MyStatus {
 
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	Long id;
-	String userId;		// 사용자 ID
+	Long userId;		// 사용자 ID
 	String name;		// 사용자 이름
 	Double myServiceRate;	// 내가 받은 총 별점 합
 	Double myServiceCnt;	// 내가 받은 총 별점 개수

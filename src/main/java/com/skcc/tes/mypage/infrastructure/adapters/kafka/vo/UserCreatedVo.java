@@ -8,7 +8,7 @@ import lombok.*;
 @AllArgsConstructor
 @Builder
 public class UserCreatedVo extends KafkaData {
-    private String userId;
+    private Long userId;
     private String userNm;
     private String status;
 }
