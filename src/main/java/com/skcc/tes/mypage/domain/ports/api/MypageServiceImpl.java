@@ -23,6 +23,11 @@ public class MypageServiceImpl implements MypageServicePort{
     }
 
     @Override
+    public MyStatusDto findByUserId(Long userId) {
+        return mypagePersistence.findByUserId(userId);
+    }
+
+    @Override
     public MyStatusDto save(MyStatusDto src) {
         return mypagePersistence.save(src);
     }

@@ -9,6 +9,8 @@ import java.util.List;
 public interface MyStatusPersistencePort {
     MyStatusDto findById(Long id);
 
+    MyStatusDto findByUserId(Long userId);
+
     MyStatusDto save(MyStatusDto src);
 
     List<MyStatusDto> findAll(Sort userId);

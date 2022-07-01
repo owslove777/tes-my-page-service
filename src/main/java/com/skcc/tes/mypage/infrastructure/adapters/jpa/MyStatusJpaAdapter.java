@@ -25,6 +25,12 @@ public class MyStatusJpaAdapter implements MyStatusPersistencePort {
     }
 
     @Override
+    public MyStatusDto findByUserId(Long userId) {
+        Optional<MyStatus> byId = myStatusRepository.findByUserId(userId);
+        return byId.map(MyStatus::toDto).orElse(null);
+    }
+
+    @Override
     public MyStatusDto save(MyStatusDto src) {
         MyStatus saved = myStatusRepository.save(MyStatus.parseFrom(src));
         return saved.toDto();

@@ -40,4 +40,11 @@ public class MyPageController {
         MyStatusDto myStatus = mypageService.findById(id);
         return myStatus;
     }
+
+    // Select By User ID
+    @GetMapping("/mypage/user/{id}")
+    public MyStatusDto getMyPageByUserId(@PathVariable Long id) {
+        MyStatusDto myStatus = mypageService.findByUserId(id);
+        return myStatus;
+    }
 }

@@ -10,6 +10,8 @@ import java.util.List;
 public interface MypageServicePort {
     MyStatusDto findById(Long id);
 
+    MyStatusDto findByUserId(Long id);
+
     MyStatusDto save(MyStatusDto src);
 
     List<MyStatusDto> findAll();
