@@ -4,6 +4,7 @@ import com.skcc.tes.mypage.domain.data.MyStatusDto;
 import com.skcc.tes.mypage.domain.ports.spi.MyStatusPersistencePort;
 import com.skcc.tes.mypage.infrastructure.adapters.kafka.vo.ContractReservedKafkaVo;
 import com.skcc.tes.mypage.infrastructure.adapters.kafka.vo.ContractUpdatedVo;
+import com.skcc.tes.mypage.infrastructure.adapters.kafka.vo.StarRateCreatedVo;
 import com.skcc.tes.mypage.infrastructure.adapters.kafka.vo.UserCreatedVo;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Sort;
@@ -106,5 +107,19 @@ public class MypageServiceImpl implements MypageServicePort{
             default:
                 break;
         }
+    }
+
+    @Override
+    public void newRatingAdded(StarRateCreatedVo src) {
+        if (src == null) {
+            return;
+        }
+        Long talentUserID = src.getSellerId();
+        MyStatusDto talentUser = findById(talentUserID);
+        double totalComments = talentUser.getMyServiceCnt() == null ? 1 : talentUser.getMyServiceCnt() + 1;
+        double totalRates = talentUser.getMyServiceRate() == null ? src.getRate() : talentUser.getMyServiceRate() + src.getRate();
+        talentUser.setMyServiceCnt(totalComments);
+        talentUser.setMyServiceRate(totalRates);
+        save(talentUser);
     }
 }

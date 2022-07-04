@@ -5,6 +5,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.skcc.tes.mypage.domain.ports.api.MypageServicePort;
 import com.skcc.tes.mypage.infrastructure.adapters.kafka.vo.ContractReservedKafkaVo;
 import com.skcc.tes.mypage.infrastructure.adapters.kafka.vo.ContractUpdatedVo;
+import com.skcc.tes.mypage.infrastructure.adapters.kafka.vo.StarRateCreatedVo;
 import com.skcc.tes.mypage.infrastructure.adapters.kafka.vo.UserCreatedVo;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -56,6 +57,8 @@ public class PolicyHandler{
                 break;
             case "StarRateCreated": // 별점 등록 시
                 log.info("## 신규 별점 등록 발생");
+                StarRateCreatedVo starRateCreatedVo = parseToClass(eventString, StarRateCreatedVo.class);
+                mypageService.newRatingAdded(starRateCreatedVo);
                 break;
             default:
                 break;
