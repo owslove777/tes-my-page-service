@@ -17,7 +17,7 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 public class MyStatus {
 
-	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Id
 	Long id;
 	@Column(name = "userId")
 	Long userId;		// 사용자 ID
