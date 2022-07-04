@@ -9,7 +9,7 @@ import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity(name = "my_page_status")
-@Table(name = "my_page_status")
+@Table(name = "my_page_status", uniqueConstraints={@UniqueConstraint(name = "userIdUnique", columnNames = {"userId"})})
 @Setter
 @Getter
 @Builder
@@ -19,6 +19,7 @@ public class MyStatus {
 
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	Long id;
+	@Column(name = "userId")
 	Long userId;		// 사용자 ID
 	String name;		// 사용자 이름
 	Double myServiceRate;	// 내가 받은 총 별점 합

@@ -22,7 +22,7 @@ public class MyPageController {
     // Create
     @PostMapping("/mypage")
     public MyStatusDto createNewUserInfo(@RequestBody MyStatusDto src) {
-        src.setId(null);
+        src.setId(src.getUserId());
         MyStatusDto saved = mypageService.save(src);
         return saved;
     }

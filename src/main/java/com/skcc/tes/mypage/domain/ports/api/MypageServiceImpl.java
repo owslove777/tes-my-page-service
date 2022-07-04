@@ -29,6 +29,9 @@ public class MypageServiceImpl implements MypageServicePort{
 
     @Override
     public MyStatusDto save(MyStatusDto src) {
+        if (src.getId() == null || src.getId() != src.getUserId()) {
+            src.setId(src.getUserId());
+        }
         return mypagePersistence.save(src);
     }
 
@@ -40,6 +43,7 @@ public class MypageServiceImpl implements MypageServicePort{
     @Override
     public MyStatusDto createUserFromMessage(UserCreatedVo src) {
         MyStatusDto newUser = MyStatusDto.builder()
+                .id(src.getUserId())
                 .userId(src.getUserId())
                 .name(src.getUserNm())
                 .userRequestCntDone(0L)
